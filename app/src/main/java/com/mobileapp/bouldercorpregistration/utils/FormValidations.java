@@ -403,7 +403,7 @@ public class  FormValidations {
 
 
     //Create hash map of registration data
-    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public static ArrayList getRegistrationDataArray(){
         ArrayList<String> regDataArray = new ArrayList<String>();
 
@@ -444,7 +444,7 @@ public class  FormValidations {
         return regDataArray;
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public static int getAge(){
         int age;
         int dateYear = 0;

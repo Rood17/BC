@@ -157,8 +157,6 @@ public class RegistrationForm extends AppCompatActivity {
                 //Go to next activity
                 if (checkPermissions())
                     continueToDoc(view);
-                else
-                    Toast.makeText(view.getContext(), R.string.noPermissions, Toast.LENGTH_LONG).show();
 
             }
         });
@@ -259,7 +257,7 @@ public class RegistrationForm extends AppCompatActivity {
         Intent goToReviewDoc = new Intent();
         goToReviewDoc.setClass(this, ReviewDoc.class);
 
-        if (!FormValidations.validateForm(view) ) {
+        if (FormValidations.validateForm(view) ) {
             startActivity(goToReviewDoc);
             //dialogForm.dismiss();
         } else {
@@ -370,6 +368,7 @@ public class RegistrationForm extends AppCompatActivity {
             Toast.makeText(this.getApplicationContext(),
                     "Gracias",
                     Toast.LENGTH_LONG).show();
+            continueToDoc((View) getResources().getLayout(R.layout.activity_registration_form));
         }
     }
 
